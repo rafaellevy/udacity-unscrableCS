@@ -63,7 +63,8 @@ for possibleMatch in calls:
     numbersCalled.add(possibleMatch[0])
     receiving_bangalore += 1
 
-
+print(total)
+print(receiving_bangalore)
 
 
 """Print the answer as a part of a message::
