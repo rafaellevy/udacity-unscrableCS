@@ -75,3 +75,6 @@ result = receiving_bangalore / total * 100
 print(result)
 
 print("%.2f percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore."%result)
+
+
+"""Time complexity is O(nlogn)"""

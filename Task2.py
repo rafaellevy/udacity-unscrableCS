@@ -27,8 +27,6 @@ for call in calls:
     elif call[0] not in times.keys():
         times[call[0]] = int(call[3])
     
-     
- 
 duration = (max(times.values()))
 phoneNumber = max(times,key=times.get)
 
@@ -36,5 +34,6 @@ phoneNumber = max(times,key=times.get)
 print('''%s spent the longest time, %s seconds, on the phone during 
 September 2016.'''%(phoneNumber,duration))
 
+"""Time complexity is O(n)"""
 
 

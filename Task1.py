@@ -32,6 +32,8 @@ result = callsList | textsList
 
 print("There are " + str(len(result)) + " different telephone numbers in the records.")
 
+""" Time complexity for this problem is O(n)
+"""
 
 
 

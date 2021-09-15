@@ -42,8 +42,7 @@ print("These numbers could be telemarketers: ")
 for teleNumber in teleHellList:
     print(teleNumber)
 
-
-
+"""Time complexity is O(nlogn)"""
 
 
 
