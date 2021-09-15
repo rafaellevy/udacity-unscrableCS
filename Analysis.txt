@@ -1,0 +1,9 @@
+Problem 0: O(n)
+
+Problem 1: O(n)
+
+Problem 2: O(n)
+
+Problem 3: O(nlogn)
+
+Problem 4: O(nlogn)
