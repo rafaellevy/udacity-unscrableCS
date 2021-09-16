@@ -44,11 +44,11 @@ for possibleMatch in calls:
     
 numbersCalledList = list(numbersCalled)
 numbersCalledList.sort()
-print(numbersCalledList)
+
 
 print("The numbers called by people in Bangalore have codes:")
 for number in numbersCalledList:
-  print(number)
+  print(number[5:])
 
 """Part B: What percentage of calls from fixed lines in Bangalore are made
 to fixed lines also in Bangalore? In other words, of all the calls made
@@ -69,10 +69,9 @@ for possibleMatch in calls:
     numbersCalled.add(possibleMatch[0])
     receiving_bangalore += 1
 
-print(total)
-print(receiving_bangalore)
+
 result = receiving_bangalore / total * 100
-print(result)
+
 
 print("%.2f percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore."%result)
 

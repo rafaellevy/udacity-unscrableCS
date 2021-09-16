@@ -1,5 +1,5 @@
-Problem 0: O(n) 
-Because we are accessing the first and last values from the lists (calls and texts) by an index
+Problem 0: O(1) 
+The overall time complexity will be O(1) as the code doesn't depend on the input size(or the data size).
 
 Problem 1: O(n)
 Because we are accessing the first and last values from the lists (calls and texts) by an index
@@ -10,5 +10,5 @@ Because we are accessing the first and last values from the lists (calls and tex
 Problem 3: O(nlogn)
 Because we are accessing the first and last values from the lists (calls and texts) by an index and sorting
 
-Problem 4: O(nlogn)
+Problem 4: O(n)
 Because we are accessing the first and last values from the lists (calls and texts) by an index and sorting

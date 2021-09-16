@@ -21,13 +21,17 @@ with open('calls.csv', 'r') as f:
 times = {}
 
 for call in calls:
-    if call[0] in times.keys() and times[call[0]] < int(call[3]):
+    if call[0] not in times.keys():
         times[call[0]] = int(call[3])
-        
-    elif call[0] not in times.keys():
-        times[call[0]] = int(call[3])
+    if call[1] not in times.keys():
+        times[call[1]] = int(call[3])
+    else:
+        times[call[0]] = times[call[0]] + int(call[3])
+        times[call[1]] = times[call[1]] + int(call[3])
+
     
 duration = (max(times.values()))
+
 phoneNumber = max(times,key=times.get)
 
 

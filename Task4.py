@@ -28,21 +28,23 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
-teleHellSet = set()
-telemarketersPrefix = re.compile("^140")
 
-for number in calls:
-    if telemarketersPrefix.match(number[0]):
-        teleHellSet.add(number[0])
 
-teleHellList = list(teleHellSet)
-teleHellList.sort()
+
+nonTeleNumbers = []
+
+for call in calls:
+    nonTeleNumbers.append(call[1])
+
+for text in texts:
+    nonTeleNumbers.append(text[0])
+    nonTeleNumbers.append(text[1])
 
 print("These numbers could be telemarketers: ")
-for teleNumber in teleHellList:
-    print(teleNumber)
+for call in calls:
+    if call[0] not in nonTeleNumbers:
+        print(call[0])
 
-"""Time complexity is O(nlogn)"""
 
 
 
