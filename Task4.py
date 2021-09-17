@@ -32,6 +32,7 @@ The list of numbers should be print out one per line in lexicographic order with
 
 
 nonTeleNumbers = []
+teleNumbers = set()
 
 for call in calls:
     nonTeleNumbers.append(call[1])
@@ -40,10 +41,18 @@ for text in texts:
     nonTeleNumbers.append(text[0])
     nonTeleNumbers.append(text[1])
 
-print("These numbers could be telemarketers: ")
+
 for call in calls:
     if call[0] not in nonTeleNumbers:
-        print(call[0])
+        teleNumbers.add(call[0])
+
+teleNumbersList = list(teleNumbers)
+
+teleNumbersList.sort()
+print("These numbers could be telemarketers: ")
+for number in teleNumbersList:
+    print(number)
+
 
 
 

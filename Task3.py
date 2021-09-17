@@ -40,7 +40,16 @@ prefixCode = re.compile("\(080\)")
 
 for possibleMatch in calls:
   if prefixCode.match(possibleMatch[0]):
-    numbersCalled.add(possibleMatch[0])
+      if possibleMatch[1].startswith("(0"):
+            # string slicing on possibleMatch[1]
+            areaCode = possibleMatch[1][0:possibleMatch[1].find(')')+1]
+      elif possibleMatch[1].startswith(('7', '8', '9')):
+            areaCode = possibleMatch[1][0:4]
+      elif possibleMatch[1].startswith("140"):
+            areaCode = "140"
+      numbersCalled.add(areaCode)
+
+
     
 numbersCalledList = list(numbersCalled)
 numbersCalledList.sort()
@@ -48,7 +57,7 @@ numbersCalledList.sort()
 
 print("The numbers called by people in Bangalore have codes:")
 for number in numbersCalledList:
-  print(number[5:])
+  print(number)
 
 """Part B: What percentage of calls from fixed lines in Bangalore are made
 to fixed lines also in Bangalore? In other words, of all the calls made
